@@ -15,6 +15,7 @@ Der aktuelle Leitfaden ist der friedhöfe.online Stuttgart. Er soll sauber weite
 
 ## Wichtige Unterlagen
 
+- `AGENTS.md` - verbindliche KI-Arbeitsregel; je neuer Agent einmal lesen, nicht pro Prompt wiederholen
 - `.cursor/rules/trauerohr-kompass.mdc` - feste Projektregeln
 - `CLOUDFLARE_GITHUB_DEPLOYMENT.md` - einfache GitHub-/Cloudflare-Schritte
 
