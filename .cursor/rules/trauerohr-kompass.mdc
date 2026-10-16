@@ -36,6 +36,10 @@ Bei einer neuen Agentenuebernahme `AGENTS.md` und `CURSOR_START_HERE.md` einmal 
 - Sobald ein konkreter Blocker die Weiterarbeit verhindert, ihn mit den bereits geprueften Punkten und dem genau fehlenden Schritt benennen. Nicht durch wiederholte Anlaeufe oder Vermutungen Zeit verlieren.
 - Nach Abschluss die erledigten Schritte, die Pruefergebnisse und verbleibende offene Punkte klar voneinander trennen.
 
+## Verbindlicher Zeit- und Arbeitsrahmen
+
+Die vollständige, modellübergreifende Regel steht in `AGENTS.md`. Bei einer neuen Agentenübernahme einmal lesen und im Kontext behalten; nicht bei Folgeprompts erneut lesen oder wiederholen. Auftrag, Ist-Stand, Nicht-Ziel und prüfbares Fertig-Kriterium vor Beginn kurz festhalten. Eine einzelne Änderung hat standardmäßig höchstens 30 Minuten aktive Zielzeit. Bei 15 Minuten ohne nachweisbaren Fortschritt sowie bei Überschreitung des vereinbarten Budgets anhalten und berichten. Insgesamt höchstens zwei Lösungsversuche; danach mit genauem Blocker stoppen. Arbeitsfortschritt, Prüfungen und offene Punkte gemäß `AGENTS.md` melden.
+
 ## Datenschutz / DSGVO
 
 - Datensparsamkeit zuerst.
