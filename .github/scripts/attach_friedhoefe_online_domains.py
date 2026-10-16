@@ -9,6 +9,10 @@ TOKEN = os.environ["CLOUDFLARE_API_TOKEN"]
 PROJECT = "trauerguide"
 API = "https://api.cloudflare.com/client/v4"
 
+# IDN friedhöfe.online
+ROOT = "xn--friedhfe-s4a.online"
+WWW = "www.xn--friedhfe-s4a.online"
+
 
 def request(method, path, body=None):
     data = None if body is None else json.dumps(body).encode("utf-8")
@@ -52,13 +56,7 @@ for p in projects.get("result") or []:
         f"{cfg.get('owner')}/{cfg.get('repo_name')}",
     )
 
-# Unicode + Punycode (Cloudflare akzeptiert beides; IDN: xn--friedhfe-s4a.online)
-for domain in (
-    "xn--friedhfe-s4a.online",
-    "www.xn--friedhfe-s4a.online",
-    "friedhöfe.online",
-    "www.friedhöfe.online",
-):
+for domain in (ROOT, WWW):
     print(f"== Add domain {domain} ==")
     resp = request(
         "POST",
@@ -69,10 +67,57 @@ for domain in (
 
 print("== Current domains on project ==")
 domains = request("GET", f"/accounts/{ACCOUNT_ID}/pages/projects/{PROJECT}/domains")
-print(json.dumps(domains, indent=2)[:6000])
+print(json.dumps(domains, indent=2)[:8000])
+
+print("== Ensure zone for IDN root ==")
+zones = request("GET", f"/zones?name={ROOT}")
+print(json.dumps(zones, indent=2)[:3000])
+if not (zones.get("result") or []):
+    created = request(
+        "POST",
+        "/zones",
+        {"name": ROOT, "account": {"id": ACCOUNT_ID}, "jump_start": True},
+    )
+    print("== Create zone ==")
+    print(json.dumps(created, indent=2)[:4000])
+    zone = (created.get("result") or {})
+else:
+    zone = zones["result"][0]
+    print("Zone exists:", zone.get("id"), zone.get("status"), zone.get("name_servers"))
+
+zone_id = zone.get("id")
+if zone_id:
+    detail = request("GET", f"/zones/{zone_id}")
+    print("== Zone detail ==")
+    print(json.dumps(detail, indent=2)[:4000])
+    ns = (detail.get("result") or {}).get("name_servers") or zone.get("name_servers")
+    print("REQUIRED_NAMESERVERS:", ns)
+
+    # Apex CNAME to Pages (CNAME flattening) + www CNAME
+    for name, content in ((ROOT, "trauerguide.pages.dev"), (WWW, "trauerguide.pages.dev")):
+        existing = request(
+            "GET",
+            f"/zones/{zone_id}/dns_records?type=CNAME&name={name}",
+        )
+        print(f"== Existing CNAME {name} ==")
+        print(json.dumps(existing, indent=2)[:2000])
+        if not (existing.get("result") or []):
+            added = request(
+                "POST",
+                f"/zones/{zone_id}/dns_records",
+                {
+                    "type": "CNAME",
+                    "name": name,
+                    "content": content,
+                    "proxied": True,
+                    "ttl": 1,
+                },
+            )
+            print(f"== Add CNAME {name} ==")
+            print(json.dumps(added, indent=2)[:2000])
 
 print("== Zones ==")
-zones = request("GET", "/zones?per_page=50")
-print("success", zones.get("success"))
-for z in zones.get("result") or []:
-    print("-", z.get("name"), z.get("status"), z.get("id"))
+zones_all = request("GET", "/zones?per_page=50")
+print("success", zones_all.get("success"))
+for z in zones_all.get("result") or []:
+    print("-", z.get("name"), z.get("status"), z.get("id"), z.get("name_servers"))
