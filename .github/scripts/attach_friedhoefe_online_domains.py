@@ -52,7 +52,13 @@ for p in projects.get("result") or []:
         f"{cfg.get('owner')}/{cfg.get('repo_name')}",
     )
 
-for domain in ("friedhofslotse-theo.de", "www.friedhofslotse-theo.de"):
+# Unicode + Punycode (Cloudflare akzeptiert beides; IDN: xn--friedhfe-s4a.online)
+for domain in (
+    "xn--friedhfe-s4a.online",
+    "www.xn--friedhfe-s4a.online",
+    "friedhöfe.online",
+    "www.friedhöfe.online",
+):
     print(f"== Add domain {domain} ==")
     resp = request(
         "POST",

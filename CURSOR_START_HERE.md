@@ -1,16 +1,16 @@
-# Cursor Start Here - Friedhofslotse THEO Stuttgart
+# Cursor Start Here - friedhöfe.online Stuttgart
 
 Dies ist die Uebergabe fuer Cursor.
 
 ## Ziel
 
-Der aktuelle Leitfaden ist der Friedhofslotse THEO Stuttgart. Er soll sauber weitergefuehrt werden und spaeter als Vorlage fuer weitere regionale TrauerOhr-Friedhofslotse THEOs dienen.
+Der aktuelle Leitfaden ist der friedhöfe.online Stuttgart. Er soll sauber weitergefuehrt werden und spaeter als Vorlage fuer weitere regionale TrauerOhr-friedhöfe.onlines dienen.
 
 ## Wichtigste Dateien
 
 - `index.html` ist die Startseite mit Einleitung und Karte zum Regierungsbezirk Stuttgart.
 - `regionen/index.html` ist die Regionen-Uebersicht.
-- `stuttgart/index.html` ist der bestehende Friedhofslotse THEO Stuttgart.
+- `stuttgart/index.html` ist der bestehende friedhöfe.online Stuttgart.
 - `ratgeber/index.html` ist der eigene Ratgeber, nicht als Reiter in den Regionen.
 
 ## Wichtige Unterlagen
@@ -20,15 +20,15 @@ Der aktuelle Leitfaden ist der Friedhofslotse THEO Stuttgart. Er soll sauber wei
 
 ## Aktueller Stand
 
-- Die Startseite heisst **Friedhofslotse THEO** und steht extra im Menue als **Start**.
+- Die Startseite heisst **friedhöfe.online** und steht extra im Menue als **Start**.
 - Das Menue lautet **Start**, **Regionen BW**, **Ratgeber**. In einer Region kommen **Bestatter** und **Friedhöfe** dazu.
 - Der Menuepunkt heisst **Regionen BW**, damit spaeter weitere Regionen in Baden-Wuerttemberg dazukommen koennen.
-- Die Startseite zeigt den Friedhofslotse THEO-Text und eine vereinfachte eigene Karte des Regierungsbezirks Stuttgart. Fremde Kartenbilder werden nicht verwendet.
+- Die Startseite zeigt den friedhöfe.online-Text und eine vereinfachte eigene Karte des Regierungsbezirks Stuttgart. Fremde Kartenbilder werden nicht verwendet.
 - Stuttgart liegt in der Rubrik Regionen und ist unter `/stuttgart/` erreichbar. Der volle Friedhof TO GO bleibt dort.
 - Weitere Regionen im Regierungsbezirk Stuttgart haben vorbereitete Seiten mit Häfner & Züfle, Beispielkarte und Friedhöfen. In den Regionen gibt es nur die Reiter Bestatter und Friedhöfe.
 - Der Ratgeber steht extra im Menue und unter `/ratgeber/`.
 - Bestatter stehen nicht auf der Startseite, sondern in der jeweiligen Region.
-- Standard-Ueberschrift ist **Friedhofslotse THEO**, darunter klein **von TrauerOhr**. Die Region steht im Menue, nicht im Produktnamen.
+- Standard-Ueberschrift ist **friedhöfe.online**, darunter klein **von TrauerOhr**. Die Region steht im Menue, nicht im Produktnamen.
 - Bestatter: nur Häfner & Züfle plus eine Beispielkarte Mustermann Bestattungen (Werbung moeglich).
 - Kein Kostenrechner, keine Preise, keine Gebuehrentabelle.
 - Friedhof TO GO: Klick oeffnet Grabfelder; Karte bleibt erreichbar.
@@ -36,8 +36,8 @@ Der aktuelle Leitfaden ist der Friedhofslotse THEO Stuttgart. Er soll sauber wei
 - Juedische Sonderbereiche bleiben ohne eigenes Bild.
 - Wikimedia-Grabfeldfotos bleiben zusaetzlich bei Hauptfriedhof und Waldfriedhof.
 - Vorsorge-Hinweis bleibt unten, klein und ruhig, mit dezentem blauen Rahmen `#1C00CC`. Er steht auf der Startseite, Regionen, Ratgeber und allen Regionsseiten. Button: Zur Vorsorge-App, Link `https://digitale-bestattungsvorsorge.de`.
-- Oeffentliche Adresse: `friedhofslotse-theo.de`
-- Fusszeile: Domain `friedhofslotse-theo.de` und `© 2026 Friedhofslotse THEO. Ein Projekt von TrauerOhr.`
+- Oeffentliche Adresse: `friedhöfe.online`
+- Fusszeile: Domain `friedhöfe.online` und `© 2026 friedhöfe.online. Ein Projekt von TrauerOhr.`
 - Keine Kosten-, Preis- oder Satzungssaetze auf der oeffentlichen Seite.
 - Wenn eine Funktion entfaellt, immer auch Footer, Tabellen, Hinweise und verwandte Saetze mitpruefen.
 

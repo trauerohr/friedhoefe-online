@@ -1,4 +1,4 @@
-name: Attach Friedhofslotse THEO domains
+name: Attach friedhöfe.online domains
 
 on:
   workflow_dispatch:
@@ -14,4 +14,4 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: python3 .github/scripts/attach_friedhofslotse_domains.py
+        run: python3 .github/scripts/attach_friedhoefe_online_domains.py

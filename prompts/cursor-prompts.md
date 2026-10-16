@@ -2,11 +2,11 @@
 
 ## 1. Kleine Aenderung sicher umsetzen
 
-Bitte aendere nur die konkret genannte Stelle im TrauerOhr Friedhofslotse THEO (friedhofslotse-theo.de). Das bestehende Erscheinungsbild soll erhalten bleiben. Arbeite ruhig, professionell und ohne unnoetige technische Komplexitaet. Erklaere mir vorher kurz, was du aenderst, warum du es aenderst und welche Auswirkung es hat.
+Bitte aendere nur die konkret genannte Stelle im TrauerOhr friedhöfe.online (friedhöfe.online). Das bestehende Erscheinungsbild soll erhalten bleiben. Arbeite ruhig, professionell und ohne unnoetige technische Komplexitaet. Erklaere mir vorher kurz, was du aenderst, warum du es aenderst und welche Auswirkung es hat.
 
 ## 2. Neuen Stadt-Kompass aus Stuttgart ableiten
 
-Erstelle aus dem bestehenden Friedhofslotse THEO Stuttgart eine neue Version fuer `[STADT]`.
+Erstelle aus dem bestehenden friedhöfe.online Stuttgart eine neue Version fuer `[STADT]`.
 
 Bitte passe an:
 

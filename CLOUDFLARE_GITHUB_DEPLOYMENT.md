@@ -25,7 +25,7 @@ Empfohlene Struktur im Repository:
 
 Einstellungen:
 
-- Pages-Projektname: bestehendes Git-Projekt, oeffentliche Domain `friedhofslotse-theo.de`
+- Pages-Projektname: bestehendes Git-Projekt, oeffentliche Domain `friedhöfe.online`
 - Framework preset: `None`
 - Build command: leer lassen
 - Output directory: `/`
@@ -36,9 +36,9 @@ GitHub ist direkt mit Cloudflare Pages verbunden. Die Seite wird bei Push auf `m
 
 Oeffentliche Adresse:
 
-`friedhofslotse-theo.de`
+`friedhöfe.online`
 
-Aeltere Testadressen werden nicht weiter genutzt. Es bleibt ein Cloudflare-Pages-Projekt; oeffentlich ist nur `friedhofslotse-theo.de`.
+Aeltere Testadressen werden nicht weiter genutzt. Es bleibt ein Cloudflare-Pages-Projekt; oeffentlich ist nur `friedhöfe.online`.
 
 Wenn Cloudflare Pages verbunden ist:
 
