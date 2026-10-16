@@ -19,6 +19,10 @@ Der aktuelle Leitfaden ist der friedhöfe.online Stuttgart. Er soll sauber weite
 - `.cursor/rules/trauerohr-kompass.mdc` - feste Projektregeln
 - `CLOUDFLARE_GITHUB_DEPLOYMENT.md` - einfache GitHub-/Cloudflare-Schritte
 
+## Verbindliche KI-Arbeitsregel
+
+`AGENTS.md` ist die verbindliche Regel für alle KI-Modelle. Ein neuer Agent liest sie und diese Übergabe einmal zu Beginn, übernimmt den bestätigten Stand und liest sie nicht bei jedem Folgeprompt erneut. Für jede Aufgabe: Ziel, Ist-Stand, Nicht-Ziel und prüfbares Fertig-Kriterium festhalten; höchstens fünf Schritte. Für eine klar abgegrenzte Änderung gelten höchstens 30 Minuten aktive Zielzeit. Bei 15 Minuten ohne Fortschritt oder bei drohender Budgetüberschreitung anhalten und berichten. Höchstens zwei Lösungsversuche insgesamt; danach mit dem konkreten Blocker stoppen. Abschluss nach dem Format in `AGENTS.md`.
+
 ## Aktueller Stand
 
 - Die Startseite heisst **friedhöfe.online** und steht extra im Menue als **Start**.
