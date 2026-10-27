@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -663,6 +663,7 @@
         const bestatterData = [
             {
                 id: "haefner-zuefle",
+                hidden: true,
                 name: "Häfner & Züfle Bestattungen",
                 district: "Stuttgart, im Ländle und überall",
                 established: "Inhabergeführt seit 2006",
@@ -678,7 +679,7 @@
                     { name: "Filiale Stuttgart-West (Zentrale)", address: "Breitscheidstraße 44 & 44a, 70176 Stuttgart", note: "Mit Feierhalle und 6 Parkplätzen im Hof" },
                     { name: "Filiale Stuttgart-Möhringen", address: "Hechinger Straße 24, 70567 Stuttgart", note: "Filiale & Beratungsbüro" },
                     { name: "Filiale Stuttgart-Plieningen", address: "Filderhauptstraße 7, 70599 Stuttgart", note: "Mit Feierhalle" },
-                    { name: "Stuttgart-Wangen (Mobil)", address: "Telefonische Beratung & Hausbesuche in Wangen", note: "Mobil erreichbar unter 0711 2318120 (derzeit kein festes Büro vor Ort)" }
+                    { name: "Stuttgart-Wangen", address: "Wangen", note: "Telefonisch erreichbar unter 0711 2318120 (derzeit kein festes Büro vor Ort)" }
                 ]
             },
             {
@@ -686,7 +687,7 @@
                 name: "Das letzte Möbelstück",
                 district: "Grabmalgestaltung",
                 established: "TrauerOhr",
-                logo: "../assets/logos/trauerohr.png?v=6",
+                logo: "../assets/logos/trauerohr.png?v=7",
                 address: "Inhaberin Stephanie Schmidt",
                 phone: "0176 41796132",
                 phoneLabel: "0176 41796132 · Mobil &amp; WhatsApp",
@@ -789,7 +790,7 @@
         }
         function initApp() {
             switchTab('bestatter');
-            renderBestatter(bestatterData);
+            renderBestatter(bestatterData.filter(b => !b.hidden));
             document.addEventListener('click', (event) => {
                 document.querySelectorAll('.regionen-menu').forEach((menu) => {
                     if (!menu.contains(event.target)) menu.removeAttribute('open');
